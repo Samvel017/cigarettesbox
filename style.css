@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ccc;
+  min-height: 80vh;
+  padding: 25px;
+  width: 900px;
+  border: 4px solid black;
+  position: relative;
+  margin: 20px 0;
+}
+
+.container .left-side {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (200px)[3];
+      grid-template-columns: repeat(3, 200px);
+  -ms-grid-rows: (200px)[3] 200px;
+      grid-template-rows: repeat(3, 200px) 200px;
+  grid-gap: 20px;
+}
+
+.container .left-side .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  background-color: #a5a5a5;
+  border: 2px solid black;
+}
+
+.container .left-side .item img {
+  width: 150px;
+  text-align: center;
+}
+
+.container .left-side .item .click-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .left-side .item .click-box span {
+  color: #fff;
+  font-size: 20px;
+}
+
+.container .left-side .item .click-box .button {
+  width: 25px;
+  height: 25px;
+  background-color: #4b4b4b;
+  -webkit-box-shadow: 0 0 10px #4b4b4b;
+          box-shadow: 0 0 10px #4b4b4b;
+  border-radius: 50%;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.container .left-side .item .click-box .button:hover {
+  background-color: yellowgreen;
+  -webkit-box-shadow: 0 0 10px yellowgreen;
+          box-shadow: 0 0 10px yellowgreen;
+}
+
+.container .left-side .take-box {
+  width: 100%;
+  height: 200px;
+  background-color: #505050;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container .left-side .take-box .take-box-open {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border: 4px solid black;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.container .left-side .take-box .take-box-open:hover {
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+}
+
+.container .left-side .take-box .box-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  position: absolute;
+}
+
+.container .left-side .take-box .box-flex img {
+  width: 100px;
+  display: none;
+}
+
+.container .right-side {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .right-side .display {
+  width: 95%;
+  height: 80px;
+  padding: 10px 10px 0 15px;
+  background-color: #2828fd;
+  border: 2px solid black;
+  text-align: right;
+}
+
+.container .right-side .display span {
+  font-family: "Orbitron", sans-serif !important;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.container .right-side .display strong {
+  font-family: "Orbitron", sans-serif !important;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.container .right-side .coin {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 150px;
+  background-color: #494949;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.container .right-side .coin .line {
+  width: 5px;
+  height: 100%;
+  background-color: #000;
+}
+
+.container .right-side .small-change {
+  width: 90%;
+  margin-top: 150px;
+  background-color: #a5a5a5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15px;
+}
+
+.container .right-side .small-change .change-display {
+  width: 90%;
+  background-color: #2828fd;
+  height: 70px;
+  padding-right: 5px;
+  text-align: right;
+}
+
+.container .right-side .small-change .change-display span {
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+}
+
+.container .right-side .small-change .coin-change {
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+}
+/*# sourceMappingURL=style.css.map */
